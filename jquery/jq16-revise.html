@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<h1>첨부파일</h1>
+<div class="file">
+    <form>
+        <input type="file" class="addFile" name="addFile">
+        <input type="button" value="파일추가" class="add">
+        <input type="button" value="전체삭제" class="reset">
+    </form>
+</div>
+<div class="extraFile">
+    <!--<div1>
+        <span>첨부파일1</span>
+            <input type="file" name="extraFile">
+            <input type="button" value="삭제" class="del">
+        </div1>-->
+</div>
+<script>
+i=1;
+$('.add').click(function(){
+    if(i>5){
+        alert('사진은 5개까지 올리세요')
+        return;
+    }
+    div = $('<div>').addClass('div'+i)
+    span = $('<span>').html('첨부파일'+i);
+    input1 = $('<input>').attr('type','file').attr('name','extraFile');
+    input2 = $('<input>').attr('type','button').attr('value','삭제').addClass('del');
+    extraFiles = div.append(span).append(input1).append(input2);
+    $('.extraFile').append(extraFiles);
+    i++;
+})
+$('.reset').click(function(){
+    i=1;
+    $('.extraFile').children('div').remove()
+})
+$(document).on('click','.del',function(){
+    i--;
+    $(this).parent('div').remove();
+})
+</script>
+</body>
+</html>

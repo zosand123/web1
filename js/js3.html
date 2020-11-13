@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대화상자와 변수</title>
+</head>
+<body>
+<pre>
+alert(메세지)      정보제공
+prompt(메세지,기본값) 입력값 전달
+confirm(메세지) 확인과 취소를 선택
+---------------------------------------
+변수명:영문,숫자,_,$사용
+    첫글자 숫자안됨, 대소문자 구분, 예약어사용안됨, 한글도 가능하나 영어단어만 사용권장
+var 변수;
+var 변수1,변수2,변수3;
+var a,b=1,c;
+
+데이터타입---------------------------------------
+Number:정수,실수
+String:문자열
+Boolean:true,false
+Object:객체저장
+null:값없음
+undefined:초기화되지않은변수
+파이썬처럼 동적타입:실행중 데이터타입이 자유롭게 변경
+</pre>
+<script>
+//스크립트가 먼저실행됨
+//kor=91
+kor=prompt('국어점수는=',44)
+alert("국어점수는"+kor+"입니다")
+result=confirm("점수를\n정확히\n입력했습니까?")
+//console.log(result);
+if (result){
+    document.write("정확히 입력하셨군요");
+}else{
+    document.write("다음에 정확히 입력하세요");
+}
+document.write("줄이 너무 길어서 한줄에 표현하기가 어려울 때는 \
+     역슬래시를 행끝에 붙이고 다음줄로 내려 쓰세요")
+document.write("<hr>")  //hr태그를 쓸때는 document.write안에!
+a=502;
+document.write("a="+a+"<br>");
+a="개발자";
+document.write("a="+a+"<br>");
+b=true;
+document.write("b="+b+"<br>");
+//c; //변수선언만 해주고 초기화안시키면 앞에 var을 꼭 붙여야함
+//document.write("c="+c+"<br>");
+
+//사칙연산------------------------------
+/*a1=100+30;
+a2=100-30;
+a3=100*30;
+a4=100/30;
+a5=100%30;
+console.log(a1)
+console.log(a2)
+console.log(a3)
+console.log(a4)
+console.log(a5)*/
+
+//단항연산------------------------------
+/*a=100;
+a+=5; //a=a+5;
+console.log(a)
+a-=5; //a=a-5;
+console.log(a)
+a*=5; //a=a*5;
+console.log(a)
+a/=5; //a=a/5;
+console.log(a)
+a%=5; //a=a%5;
+console.log(a)*/
+
+//증감연산자----------------------------
+a=100, x=1;
+y=a+x++;    //x--는 먼저 본연산수행후 증감진행
+console.log('a='+a)
+console.log('x='+x)
+console.log('y='+y)
+y=a+ ++x; //++x는 먼저 증감진행후 본연산수행
+console.log('a='+a)
+console.log('x='+x)
+console.log('y='+y)
+
+
+
+
+</script>
+
+</body>
+</html>

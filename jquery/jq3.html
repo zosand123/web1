@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<pre>
+1)$.each(object,function(index,item){})
+2)$(셀렉터).each(function(index,item){})
+</pre>
+<hr>
+<script>
+a1=['사과','배','감','대추']
+/*$.each(a1,function(index,item){
+    alert(index+','+item)
+})
+
+a2=[{name:'sterling',role:'cute'},{name:'Beth',role:'genius'},
+    {name:'ashly',role:'charming'}]
+$.each(a2,function(index,item){
+    //alert(index+','+item)
+    str=item.name+','+item.role
+    alert(str)
+})
+
+j1={name:'Elenor',from:'Good place'}
+$.each(j1,function(index,item){ //json 전달
+    alert(index+','+item) //index-key,item-value
+})*/
+</script>
+<hr>
+<ul>
+    <li>uno</li>
+    <li>dos</li>
+    <li>tres</li>
+    <li>cuatro</li>
+    <li>cinco</li>
+    <li>seis</li>
+    <li>sete</li>
+    <li>ocho</li>
+    <li>nueve</li>
+</ul>
+<script>
+$('li').each(function(index,item){
+    //alert(index+','+item)
+    //$(item).addClass('cl'+index)
+    $(this).addClass('c'+index)
+})
+$('li').each(function(index,item){
+    $(this).css('color','blue')
+})
+</script>
+<hr>
+<h3>un</h3>
+<h3>deux</h3>
+<h3>trois</h3>
+<script>
+colors=['red','green','blue']
+$('h3').each(function(index,item){
+    $(this).css('background',colors[index])
+})
+</script>
+<hr>
+<p>지리산에 <strong>산수유축제</strong>가 있다.</p>
+<p>지리산에 <span><strong>산수유축제</strong></span>가 있다.</p>
+<div>소백산에 <strong>진달래축제</strong>가 있다.</div>
+<p>지리산에 <strong>예쁜 산수유축제</strong>가 있어서 많은 사람들이 방문하고 있다.</p>
+<script>
+//$('p').find('strong').css('background','yellow') //p태그 아래의 모든 strong
+//$('p').children('strong').css('background','pink') //p태그 바로 아래 Strong
+//$('p > strong').css('background','yellow') //p태그 바로 아래 Strong
+$('p').each(function(index){
+    //alert($(this).text())
+    if($(this).text().length>15){
+        $(this).find('strong').css('color','red')
+    }
+})
+</script>
+</body>
+</html>

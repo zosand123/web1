@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폼연습</title>
+</head>
+<body>
+<table width="800">
+    <form name="myform" ACTION="1019-2.html" method="post">
+    <tr>
+        <td>
+        <!--label : input 태그설명    -->
+            <label for="userid">USER ID</label>
+           </td>
+        <td><input type="text" name="userid" maxlength="10" id="userid"><br></td>
+    </tr>
+    <tr>
+        <td><label for="pw1">
+            PASSWORD</label>
+        </td>
+        <td><input type="password" name="pw" id="pw1"></td>
+    </tr>
+    <tr>
+        <td>사진</td>
+        <td><input type="file" name="photo"></td>
+    </tr>
+    <tr>
+        <td>성별</td>
+        <td><input type="radio" name="woman" checked value="1">여자
+            <input type="radio" name="woman" value="2">남자
+        </td>
+    </tr>
+    <tr>
+        <td>취미</td>
+        <td><input type="checkbox" name="hobby" value="r">독서
+            <input type="checkbox" name="hobby" value="l">언어
+            <input type="checkbox" name="hobby" value="n">넷플릭스
+            <input type="checkbox" name="hobby" value="etc" checked>기타
+        </td>
+    </tr>
+    <tr>
+        <td>자기소개</td>
+        <td><textarea name="info" cols="50" rows="5">간략히 작성하세요</textarea></td>
+    </tr>
+    <tr>
+        <td>Bouffe</td>
+        <td><select name="food">
+            <option value="ff">선택</option>
+            <option value="f1">김밥</option>
+            <option value="f2" selected>떡볶이</option>
+            <option value="f3">치킨</option>
+            <option value="f4">피자</option>
+        </select></td>
+    </tr>
+        <tr>
+            <td>주민등록번호</td>
+            <td><input type="text" name="id1" maxlength="6" size="15">&nbsp;-&nbsp;<input type="text" name="id2" maxlength="7" size="15"> </td>
+        </tr>
+        <tr>
+            <td>가을여행지</td>
+            <td><select name="trip" multiple size="5">
+                <option value="t1">LA</option>
+                <option value="t2">몬트리올</option>
+                <option value="t3">리옹</option>
+                <option value="t4">베를린</option>
+                <option value="t5">멕시코시티</option>
+                <option value="t6">대만</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>관심분야</td>
+            <td><select name="point" multiple size="5">
+                <optgroup label="Language">
+                    <option>python</option>
+                    <option>java</option>
+                    <option>C</option>
+                </optgroup>
+                <optgroup label="DB">
+                    <option>oracle</option>
+                    <option>mariaDB</option>
+                    <option>access</option>
+                </optgroup>
+
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="등록하기">  <!--제출버튼-->
+                <input type="reset" value="새로작성"> <!--초기화버튼-->
+                <input type="button" value="button">
+                <input type="image" src='img\heart.jpg' width="50" height="30">
+            </td>
+        </tr>
+</form>
+</table>
+<hr>
+<form name="form2" action="1019-3.html">
+    <fieldset> <!--연관있는 입력 양식을 그룹으로 묶기-->
+        <legend>개인정보</legend> <!--그룹에 이름지정-->
+    이름 : <input type="text" name="name"><br>
+    전번 : <input type="text" name="tel"><br>
+    주소 : <input type="text" name="addr"><br>
+        </fieldset>
+        <br>
+       <fieldset>
+           <legend>신체정보</legend>
+    키 : <input type="text" name="height"><br>
+    몸무게 : <input type="text" name="weighte"><br>
+    시력좌 : <input type="text" name="left"><br>
+    시력우 : <input type="text" name="right"><br>
+           </fieldset>
+    <input type="submit" value="등록">
+    <input type="reset" value="취소">
+</form>
+</body>
+</html>
+<!--
+form : 사용자가 입력하는 입력양식
+<form method=전송방식 action=목적지 name=폼이름>
+method : get : 기본값
+        https://www.bobaedream.co.kr/mycar/mycar_list.php?gubun=K
+        https://도메인?변수1=값1&변수2=값2
+        https://
+        post : 보이지않는방식(f12로 볼수있는방법있음)
+
+</form>
+-->

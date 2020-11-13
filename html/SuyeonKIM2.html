@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>회원가입 - js14같이 혼자 해보기</title>
+<style>
+table { max-width:1400px;
+        margin:0 auto;}
+.ip {margin: 0 5px 0 0;}
+</style>
+<SCRIPT>
+//공통사항이라 변수설정
+//아이디에 커서있는 상태
+//이메일선택값을 email2에 자동으로 넣기
+</SCRIPT>
+</head>
+<body>
+<div class="container">
+<table border="1">
+<form name="join">
+<tr>
+    <th colspan="2">회원가입</th>
+</tr>
+<tr>
+    <td>사용자ID</td>
+    <td><input class="ip" type="text" name="id"><button>중복확인</button></td>
+</tr>
+<tr>
+    <td>비밀번호</td>
+    <td><input type="text" name="pw"></td>
+</tr>
+<tr>
+    <td>비밀번호확인</td>
+    <td><input type="text" name="pw"></td>
+</tr>
+<tr>
+    <td>사용자이름</td>
+    <td><input type="text" name="name"></td>
+</tr>
+<tr>
+    <td>주민등록번호</td>
+    <td><input type="text" name="ssn1">-<input type="text" name="ssn2"></td>
+</tr>
+<tr>
+    <td>Email</td>
+    <td><input type="text" name="email">@<input type="text" name="email2">
+        <select name="email">
+            <option value="e1">직접작성</option>
+            <option value="e2">네이버</option>
+            <option value="e3">다음</option>
+            <option value="e4">구글</option>
+            <option value="e5">네이트</option>
+        </select>
+    </td>
+<tr>
+    <td>취미</td>
+    <td><input type="checkbox" name="hobby" value="등산">등산
+        <input type="checkbox" name="hobby" value="낚시">낚시
+        <input type="checkbox" name="hobby" value="여행">여행
+        <input type="checkbox" name="hobby" value="독서">독서
+        <input type="checkbox" name="hobby" value="기타">기타
+    </td>
+</tr>
+<tr>
+    <td>주소</td>
+    <td><input type="text" name="addr"></td>
+</tr>
+<tr>
+    <td>직업</td>
+    <td>
+        <select name="job">
+        <option value="선택">선택</option>
+        <option value="직장인">직장인</option>
+        <option value="사업가">사업가</option>
+        <option value="무직">무직</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>자기소개</td>
+    <td><textarea name="info" cols="50" rows="5">간략히 작성하세요</textarea></td>
+</tr>
+<tr>
+    <th colspan="2">
+        <input type="submit" value="회원가입">
+        <input type="reset" value="다시입력">
+    </th>
+</tr>
+</form>
+</table>
+</div>
+</body>
+</html>

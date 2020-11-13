@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>이미지 소스속성이용해서 변경하기!!</title>
+<style>
+    .one {float:left;list-style:none; width:250px; height:300px;}
+    li img {width:200px; height:100px;}
+    .view {float:left; width:500px; height:300px;}
+    .view img {width:400px; height:300px;}
+</style>
+<script>
+function f1(i){
+    imgs=["../img/1.jpg","../img/2.jpg","../img/a.jpg"]
+    tag=document.getElementById("target")
+    tag.src=imgs[i]
+}
+</script>
+</head>
+<body>
+<ul class="one">
+    <li><a href="#" onclick="f1(0)"><img src="../img/1.jpg"></a></li>
+    <li><a href="#" onclick="f1(1)"><img src="../img/2.jpg"></a></li>
+    <li><a href="#" onclick="f1(2)"><img src="../img/a.jpg"></a></li>
+</ul>
+<div class="view">
+    <img src="../img/1.jpg" id="target">
+</div>
+</body>
+</html>

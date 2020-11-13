@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+    span, div {border:1px solid red}
+   /* .one{
+    position:relative;
+    top:5px;
+    }
+    .two{
+    position:relative;
+    right:5px;
+    }
+    .three{
+    position:relative;
+    left:5px;
+    } */
+    #first{
+    background:purple;
+    width:100px;
+    height:100px;
+    position:absolute;
+    right:0
+    }
+    #second{
+    background:Green;
+    width:300px;
+    height:300px;
+    position:relative;
+    }
+    #third{
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:blue;
+    right:0;
+    }
+    #fourth{
+    width:300px;
+    height:300px;
+    background:grey;
+    }
+    #fifth{
+    background:pink;
+    position:fixed;
+    top:100px;
+    right:100px;
+    }
+    a {text-decoration:none;}
+    a:hover{color:yellow; font-weight:900;background:blue} /*마우스 올렸을때*/
+    a:visited{color:red;}  /*이미 들린 페이지*/
+    a:active{color:pink;} /*마우스를 누르고 있을때*/
+    a:link{color:grey;}   /*미방문링크*/
+</style>
+</head>
+<body>
+<!--position:태그의 위치결정
+static   :기본값
+relative :top,bottom,left,right 속성값사용
+          static인 상태를 기준으로 위치결정
+absolute :top,bottom,left,right 속성값사용
+          포지션이 static 속성을 가지지않는 부모기준으로 위치결정
+fixed    :top,bottom,left,right 속성값사용
+            특정위치에 고정
+-->
+<span class="one">span1</span>
+<span class="two">span2</span>
+<span class="three">span3</span>
+<div>div</div>
+<hr>
+<div id="fourth">
+    div4
+    <div id="first">absolute1</div>
+</div>
+
+<div id="second">
+        <div id="third">absolute2</div>
+</div>
+<div>
+    <div id="fifth">fixed</div>
+</div>
+<hr>
+<a href="https://www.kbs.co.kr">KBS</a><br>
+<a href="https://www.imbc.com">MBC</a><br>
+<a href="https://www.sbs.co.kr">SBS</a><br>
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>전자제품 쇼핑몰</title>
+<script src="../jquery/jquery-3.5.1.min.js"></script>
+<style>
+header{background:blue}
+main{background:yellow}
+footer{background:pink}
+.wideMenu li{display:inline; float:right; padding:0 30px;}
+.wideMenu a{text-decoration:none;}
+main {float:left;clear:both;}
+.mainMenu{padding:30px; list-style:none;}
+.subMenu li{padding:10px; list-style:none;}
+.subMenu a{text-decoration:none;}
+</style>
+</head>
+<body>
+<header>
+<h1 class="logo">전자나라</h1>
+<nav class="wideMenu">
+    <ul>
+        <li><a href="#">혼수가전</a></li>
+        <li><a href="#">자취가전</a></li>
+        <li><a href="#">베스트</a></li>
+        <li><a href="#">오늘배송</a></li>
+        <li><a href="#">혼수가전</a></li>
+        <li><a href="#">테마관</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+    <ul>
+        <li class="mainMenu">냉장고/세탁기
+            <ul class="subMenu">
+                <li><a href="#">소형</a></li>
+                <li><a href="#">대형</a></li>
+                <li><a href="#">1인가구</a></li>
+                <li><a href="#">고급</a></li>
+            </ul>
+        </li>
+        <li class="mainMenu">차량/공구
+            <ul class="subMenu">
+                <li><a href="#">국산차용</a></li>
+                <li><a href="#">외제차용</a></li>
+                <li><a href="#">고급</a></li>
+                <li><a href="#">보급형</a></li>
+            </ul>
+        </li>
+        <li class="mainMenu">휴대폰/태블릿
+            <ul class="subMenu">
+                <li><a href="#">고급형</a></li>
+                <li><a href="#">보급형</a></li>
+                <li><a href="#">삼성</a></li>
+                <li><a href="#">애플</a></li>
+            </ul>
+        </li>
+        <li class="mainMenu">컴퓨터/노트북
+            <ul class="subMenu">
+                <li><a href="#">고급형</a></li>
+                <li><a href="#">보급형</a></li>
+                <li><a href="#">삼성</a></li>
+                <li><a href="#">애플</a></li>
+            </ul>
+        </li>
+        <li class="mainMenu">스포츠/레저
+            <ul class="subMenu">
+                <li><a href="#">겨울스포츠</a></li>
+                <li><a href="#">여름스포츠</a></li>
+                <li><a href="#">사계절</a></li>
+            </ul>
+        </li>
+    </ul>
+</main>
+<footer></footer>
+<script>
+$('.subMenu').hide();
+$('.mainMenu').hover(function(){
+    $(this).find('.subMenu').toggle()
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script>
+function f1(n){
+    msg="f1()함수가 "+n+"번 실행되었습니다."
+    //alert(msg)
+    document.getElementById("result").innerHTML=msg
+}
+</script>
+</head>
+<body onload="f1(5)">
+<!--제어하려는 태그가 인식된 후에 자바스크립트 함수를 호출,
+이 부분을 해결한 이벤트 onload:바디가 완전희 준비되었을때 실행해라-->
+<script>
+    //f1(5) //실행해도 html은 위에서부터 실행되기때문에 h1태그가 없기때문에 에러
+</script>
+<h1 id="result">onload 이벤트 테스트.</h1>
+<script>
+    f1(10)
+</script>
+</body>
+</html>

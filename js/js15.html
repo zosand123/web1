@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script>
+/*
+function f1(){
+    alert('hi');
+}
+a=f1
+a()
+b=function(){alert('hi');}
+b()
+
+//자바스크립트의 객체지향 - 객체생성먼저 -> 객체에 변수나 함수추가
+//자바-클래스(객체설계도) 작성->객체생성
+people={} //빈 객체생성
+people.name="희동이" //객체에 변수추가
+people.addr="쌍문동";
+people.eat=function(){ //객체에 함수 추가, 멤버변수 접근시 this키워드 사용
+    document.write(`<h2>${this.name}은 쌍화탕을 먹는다</h2>`)
+}
+people.getInfo=function(){
+    return this.name+","+this.addr
+}
+document.write(`<h2>${people.name}는 ${people.addr}에 산다</h2>`)
+people.eat()
+document.write(people.getInfo())
+
+//자바스크립트의 내장객체 : Array,Math,String,Date,Window,Document,Browser....
+//String객체
+str=new String('안영하세요');
+str1='안은영하세요';
+document.write(str)
+s1='https://wikidocs.net/book/1'
+document.write(`<h1>${s1}</h1>`)
+document.write(`<h2>문자열의길이 = ${s1.length}</h2>`)
+document.write(`<h2>네번째 글자 = ${s1.charAt(4)}</h2>`)
+document.write(`<h2>/의 처음위치 = ${s1.indexOf('/')}</h2>`)
+document.write(`<h2>/의 마지막위치 = ${s1.lastIndexOf('/')}</h2>`)
+p1=s1.indexOf('/')
+document.write(`<h2>/의 두번째위치 = ${p1+1}</h2>`)
+document.write(`<h2>@의 위치 = ${s1.indexOf('@')}</h2>`) //없는건 -1
+document.write(`<h2>s1.substring(0,5) = ${s1.substring(0,5)}</h2>`)
+document.write(`<h2>s1.substring(7) = ${s1.substring(7)}</h2>`)
+document.write(`<h2> s1.toUpperCase = ${s1.toUpperCase()}</h2>`)
+document.write(`<h2> s1.toLowerCase = ${s1.toLowerCase()}</h2>`)
+
+//도메인출력
+url='https://www.bobaedream.co.kr/mycar/mycar_list.php?gubun=K'
+s1=url.indexOf('://')
+s2=url.indexOf('/',s1+3)
+document.write("<h2>도메인 "+url.substring(s1+3,s2)+"</h2>")
+
+//파일명 출력
+s1=url.lastIndexOf('/')
+s2=url.indexOf('?')
+document.write("<h2>파일명 "+url.substring(s1+1,s2)+"</h2>")
+
+//자바스크립트의 배열 Array
+a1=new Array('둘리','1억살','쌍문동') //== a1=['둘리','1억살','쌍문동']
+document.write(`<h2>${a1[0]}</h2>`)
+document.write(`<h2>${a1[1]}</h2>`)
+document.write(`<h2>${a1[2]}</h2>`)
+document.write(`<h2>${a1[3]}</h2>`)
+a1[1]='2억살'
+document.write(`<h2>${a1[0]}</h2>`)
+document.write(`<h2>${a1[1]}</h2>`)
+document.write(`<h2>${a1[2]}</h2>`)
+
+a2=new Array() //a2=[]
+for (i=0;i<5;i++){
+    a2[i]=i*10
+}
+document.write(a2.length+"<br>")
+//document.write(a2)
+
+for(i=0;i<5;i++){
+    document.write(a2[i]+"<br>")
+}
+
+//다차원배열
+friend=[
+    ["심청","16세","착함"],
+    ["콩쥐","17세"]
+]
+document.write(`<h3>${friend.length}</h3>`) //2
+document.write(`<h3>${friend[0].length}</h3>`) //3
+document.write(`<h3>${friend[1]}</h3>`) //콩쥐,17세
+document.write(`<h3>${friend[1][1]}</h3>`)
+for(i=0;i<friend.length;i++){
+    document.write(`<h3>${friend[i]}</h3>`)
+    for(j=0;j<friend[i].length;j++){
+        document.write(`<h4>${friend[i][j]}</h4>`)
+    }
+}
+
+//split
+s1="심청,16세,착함"
+a1=s1.split(',')
+document.write(a1)
+for(i=0;i<a1.length;i++)
+    document.write(`<h4>${a1[i]}</h4>`)*/
+
+//수학객체 Math
+document.write(`<h4>${Math.max(100,10)}</h4>`)
+document.write(`<h4>${Math.min(100,10)}</h4>`)
+document.write(`<h4>${Math.round(10.2)}</h4>`)
+document.write(`<h4>${Math.ceil(3.5)}</h4>`)
+document.write(`<h4>${Math.abs(-1234)}</h4>`)
+document.write(`<h4>${Math.PI}</h4>`)
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

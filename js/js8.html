@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>가변인수</title>
+<script>
+function f1(x,y){
+    document.write(`${x}+${y}=${x+y}<br>`)
+}
+//f1(3,4)
+//f1(3,4,54)
+//f1(3)
+
+/*가변인수를 받아들이는 함수
+arguments : 인수의 배열, 암시적으로 인수전달*/
+function f2(){
+    document.write("<h1>"+arguments+"</h1>")
+    let hap=0;
+    for (i=0; i<arguments.length; i++){
+        document.write(arguments[i]+"<br>")
+        hap+=arguments[i]
+    }
+    document.write("합은 "+hap+"<br>");
+}
+//f2(3,4,5)
+//f2(34,6,788,32)
+
+
+function f3(x,y){return x+y;}
+a=f3(42,6);
+//document.write(a)
+
+/*익명함수, 함수도 하나의 데이터타입으로 변수에 넣어줄 수 있다, 변수로 불러주므로 함수이름 안씀*/
+b=function (x,y){return x-y}
+//document.write(b(34,5))
+
+/*함수의 전달,함수도 인수로 전달 */
+mul=function(x,y){return x*y;}
+add=function(x,y){return x+y;}
+function cal(q,w,e){
+    return e(q,w)
+}
+document.write(cal(11,22,mul)+"<br>")
+document.write(cal(666,22,add)+"<br>")
+
+/*자바스크립트의 상수: const, 관례상 상수이름은 대문자 권장*/
+const PI=3.141592
+r=5
+//document.write(`원둘레는 ${2*PI*r} <br>`)
+
+/*null,undefined,Infinity,NaN*/
+let age;
+//document.write(`존재하지 않는 변수 : ${name} <br>`) //무시(null)
+//document.write(`초기화안된 변수 : ${age} <br>`) //undefined
+
+let big=231908120/0
+//document.write(`무한대 : ${big} <br>`) //무한대 : Infinity
+notNumber=Math.sqrt(-2)
+//document.write(`없는 값 : ${notNumber} <br>`) //없는 값 : NaN
+
+let n ="3.141592"
+document.write(`Number()=${Number(n)}<br>`);
+document.write(`parseInt()=${parseInt(n)}<br>`);
+</script>
+</head>
+<body>
+
+</body>
+</html>

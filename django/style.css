@@ -1,0 +1,157 @@
+html {font-size:10px}
+* {box-sizing:border-box;}
+body{font-size:1.5rem;}
+    /*font-family: 'Roboto', sans-serif;} 구글폰트에서 복사해서 css에 붙여넣기!*/
+a {text-decoration:none;}
+.header {background:#0C3C26; height:70px;}
+
+.container, .container-float {max-width:1400px;
+            margin:0 auto;
+            position:relative;
+            height:50px;
+            padding:10px 0;
+            }
+
+.logo { color:white;
+        position:absolute;
+        top:0; left:0; margin:0;
+        padding:15px 0 0 30px;
+        }
+.side-logo {color:aqua;
+            font-size:13px;
+            float:left;
+            color:#00cc88;
+            padding:10px 0 0 150px;
+            }
+.nav {text-align:right;}
+.list {list-style:none;}
+.list-item{display:inline;}
+header a{color:white; padding:10px;font-weight:900; font-size:12px;}
+header a:hover{color:aqua;}
+
+.hero {
+       text-align:center;
+       background:white;
+       padding:50px 0;
+       border-bottom:1px solid #669966;
+       height:330px;
+       }
+.hero1{
+       font-size:3rem;
+       width:600px;
+       margin:30px auto;
+       font-weight:100;
+       }
+.hero2{
+        color:white;
+        font-weight:900;
+        margin:0 auto; /*가운데정렬*/
+        background: #44B788;
+        display:block;
+        border-radius:5px;
+        }
+/*<a href="#" class="hero2 main-hero2">Get started with Django</a>*/
+.hero2.main-hero2{ /*.hero2와 .main-hero2가 모두 있는경우우*/
+    width:250px;
+    padding:20px;/*버튼처럼 보이기위해 안쪽여백 줌*/
+}
+
+.hero2:hover{background:#C9F0DD;}
+
+.main-content { float:left;
+                width:60%;
+                }
+.main-title{ font-size:3rem;
+             font-weight:500;
+            }
+.mailing1{ float:left;
+           width:35%;
+         }
+.mailing2{ float:left;
+           width:35%;
+         }
+.mailing-title{color:#44B788;}
+.frm1{ position:relative; /*버튼의 위치기준*/
+       margin:5px 0 30px 0;
+}
+.btn1{  position:absolute; /*기준이 되는 부모의 포지션 속성도 변경할것*/
+        top:5px;
+        right:30px;
+        border:0;
+        background:transparent;
+        cursor:pointer; /*마우스올리면 손가락*/
+}
+input{width:95%;
+      height:30px;
+      padding:5px 70px 5px 5px;
+      border : 1px solid green;}
+
+.mailing-layout::after{content:'';
+                       display:block;
+                       clear:both;
+         }
+.main-end{clear:both;}
+.side-content{ float:left;
+               width:30%;
+               }
+
+.container-float::after{display:block;
+                          content:'';
+                          clear:both;
+} /*1.main-content와 side-content의 부모로서 자리하지못해서 부모에 가상요소를 주어 플로트속성 해제*/
+/*container-float가 자식의 높이를 완벽히 가짐을 확인*/
+
+.container-side-cta{text-align:center;}
+.side-hero2{padding:15px 30px;
+            width:350px;
+            height:50px;
+            }
+.info{padding:0 110px 0 120px;}
+
+.more::after{ /*꺽쇠표시 집어넣기!*/content:">";}
+.more{color:#44B788;
+      display:block;
+      margin:20px 0 0 0;
+      font-size:1.5rem;
+      font-weight:600;
+}
+.info{margin:30px 0;}
+.info-title{font-size:2rem;
+            padding:0 0 20px 0;
+            border-bottom:0.5px solid grey;
+}
+
+.foot-list{
+            float:left;
+            list-style-type:none;
+            color:white;
+            font-weight:900;
+}
+
+.foot-list li{font-weight:100;
+              padding:5px;
+}
+.footer2{ clear:both;
+            background: #0C4B33;
+            height:100px;
+    }
+.a{ font-size:4rem;
+               font-weight:900;
+               color:white;
+}
+.d{
+  font-size:0.9rem;
+  color: #2B8C67;
+}
+
+.footer {background:#44B788;
+         clear:both; /*2.main-content와 side-content의 플로트 영역으로부터 독립적으로 나타냄*/
+         }
+
+/*
+1.웹폰트
+2.기본스타일이 브라우저별로 조금씩 다름, 이를 최소화하기 위한 기법
+css reset
+css normalize> 구글에 치고 다운로드>다른이름으로 저장>작업중인 html이랑 같은폴더에 넣기> 링크만 붙여넣으면 끝
+<link rel="stylesheet" href="normalize.css"/>
+*/

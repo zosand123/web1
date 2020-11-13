@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>float</title>
+<style>
+#uno {width:200px;
+height:150px;
+background:red}
+
+#container {height:200px;
+background:pink}
+
+#dos {width:33%;
+height:150px;
+background:green;
+float:left;
+text-align:center;
+line-height:150px;} /*중간으로 넣기*/
+
+#tres {width:25%;
+height:150px;
+background:skyblue;
+float:left;}
+
+#cuatro {width:33%;
+height:150px;
+background:tomato;
+float:right;}
+
+#container::after{
+content:'';
+clear:both;
+} /*내용복잡하면 꼬이는 경우 있기때문에 컨테이너 넣어줌*/
+
+#cinco {width:200px;
+height:150px;
+background:purple;
+clear:both;}
+
+</style>
+</head>
+<body>
+<div id="uno">div1</div>
+<div id="container">
+    <div id="dos">div2</div>
+    <div id="tres">div3</div>
+    <div id="cuatro">div4</div>
+</div>
+<div id="cinco">div5</div>
+</body>
+</html>

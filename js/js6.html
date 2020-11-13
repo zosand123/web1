@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+</head>
+<body>
+<pre>
+함수의 정의
+function 함수명(매개변수){}
+
+함수의 호출
+함수명(매개변수);
+
+</pre>
+<script>
+/*
+function f1(){
+    document.write(`<h1>Hi JavaScript</h1>`)
+}
+f1()
+f1()
+
+function f2(x,y){
+z=x+y
+document.write(`<h1>${z}</h1>`)
+}
+f2(3,5)
+f2(1,43,5)
+f2(1)
+
+function f3(x,y){ //default값 적용
+if(x==undefined) x=10
+if(y==undefined) y=100
+z=x+y
+document.write(`<h1>${x}</h1>`)
+document.write(`<h1>${y}</h1>`)
+document.write("<h1>합은"+(z)+"</h1>")
+}
+f3(2,4)
+
+//리턴값의 사용
+function f4(x,y){
+    document.write("함수시작<br>")
+    const z=x+y;
+    if(z<10)
+        return; //빈몸으로 돌아감
+   document.write(z+" 함수끝<br>")
+    return z;
+}
+a=f4(1,11)
+document.write(a+"<br>")
+a=f4(1,4)
+document.write(a+"<br>")*/
+
+function hap(x,y){
+    return x+y
+}
+function print(x,y){
+    result=hap(x,y) //함수간 호출
+    document.write("<h1>"+result+"</h1>");
+    }
+print(1,4)
+</script>
+</body>
+</html>

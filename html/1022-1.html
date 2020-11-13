@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         * {margin:0}
+        .one {background:red;
+              width:100px;
+              height:150px;}
+        .two {background:green;
+              width:100px;
+              height:150px;}
+        span {display:block;}
+        span::after{
+              content:'####'
+                }
+         div {display:inline} /*기본속성 교환!*/
+         div::before{
+              content:'$';
+              }
+    </style>
+</head>
+<body>
+<span class="one">스팬1</span> <!--클래스 숫자로 시작하면 안됨-->
+<span class="two">스팬2</span>
+<div class="one">DIV1</div>
+<div class="two">DIV2</div>
+</body>
+</html>

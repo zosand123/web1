@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<p>틴바헌</p>
+<p>아임낫오케이</p>
+<p>퀸스갬빗</p>
+<hr>
+<div>
+    <p>넷플릭스 시리즈 추천</p>
+</div>
+<div>
+    <p>je sais pas quoi dire</p>
+</div>
+<script>
+//$('div').text('결국은 <strong>좋다</strong>랍니다')//태그인식x
+//$('div').html('결국은 <strong>좋다</strong>랍니다')
+alert($('div').text())
+alert($('div').html())
+</script>
+<pre>
+html() : 해당 엘리멘트의 첫번째 내용을 가져오거나 변경, 태그인식
+text() : 엘리멘트의 내용을 모두 가져오거나 변경, 태그인식x
+</pre>
+<script>
+console.log('html()-->'+$('p').html()) //html은 each문을 써야만 다가져옴
+console.log('text()-->'+$('p').text()) //text는 다가져옴
+</script>
+</body>
+</html>

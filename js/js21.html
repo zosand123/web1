@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script>
+    function init(){
+    
+    }
+</script>
+</head>
+<!--<body onload="init()">-->
+<body>
+<div id="uno">
+    <p id="dos">클릭하세요</p>
+</div>
+<pre>
+HTML과 자바스크립트의 분리
+</pre>
+<script>
+    window.onload=function(){
+       document.getElementById('dos').innerHTML='화면이 로드되었습니다.'
+    }
+    p = document.getElementById('dos')
+    p.onclick=function(){
+        alert('click')
+    }
+    //p.onmouseover=function(){alert('들어옴')}
+    //p.onmouseout=function(){alert('마우스나감')}
+    //p.onmouseup=function(){alert('마우스뗌')}
+    //p.onmousedown=function(){alert('마우스뗌')}
+    window.oncontextmenu=function(){ //오른쪽버튼사용불가
+        return false;
+    }
+</script>
+</body>
+</html>

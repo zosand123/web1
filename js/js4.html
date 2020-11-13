@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+if (조건){실행내용}
+</pre>
+<script>
+//score=prompt('점수는=',40) //Number를 안쓰면 String이 자동형변환됨
+score=Number(prompt('점수는=',40)) //정수실수 모두!
+//score=parseInt(prompt('점수는=',40)) //정수만
+
+document.write(typeof score+'<br>')
+
+if (score>=90 && score<=100){
+    document.write('a학점');
+}else if(score>=80 && score<90){
+    document.write('b학점');
+}else if(score>100 || score<0 || isNaN(score)){//Not a Number
+    document.write('잘못된점수');
+}else{
+    document.write('c학점')
+}
+
+//문자를 받을경우 '잘못된 점수'를 프린트 하고싶을때 :
+//형변환을 안해줄경우 알아서 형변환되어 typeof score=='string'을 쓸수있지만
+//Number로 형변환 해줄경우 무조건 Number가 돼서 isNaN(score)로 해줘야한다.
+
+/*score=prompt('점수는=',40)
+result=typeof score
+document.write(result+'<br>'+score)
+if (result=='string')
+    document.write('<br>잘못된입력')
+else
+    document.write('숫자')*/
+
+result=confirm('파일을 업로드 하시겠어요')
+if(result)
+     document.write('업로드완료');
+else
+     document.write('다시등록');
+
+
+</script>
+
+</body>
+</html>

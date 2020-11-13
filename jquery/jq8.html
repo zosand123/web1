@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="jquery-3.5.1.min.js"></script>
+<style>
+.listboss{list-style:none;}
+.list{float:left; width:200px; text-align:center; }
+.listboss::after{
+    content:'';
+    clear:both;
+    display:block;
+}
+a{text-decoration:none; width:150px; display:block;}
+.h2{background:skyblue; color:white; font-weight:900;}
+</style>
+</head>
+<body>
+<ul class="listboss">
+    <li class="list"><h2><a href="#">oracle</a></h2></li>
+    <li class="list"><h2><a href="#">html5</a></h2></li>
+    <li class="list"><h2><a href="#">css3</a></h2></li>
+    <li class="list"><h2><a href="#">javaScipt</a></h2></li>
+</ul>
+<script>
+$('.list a').hover(function(){
+                $(this).addClass('h2')
+            },function(){
+                $(this).removeClass('h2')
+        }
+)
+</script>
+</body>
+</html>
